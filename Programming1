@@ -1,1 +1,45 @@
-I am Nithesh
+#include <stdio.h>
+
+int main() {
+    int empId;
+    char name[50];
+    float basic, hra, da, pf, netSalary;
+
+    printf("----- Payroll Slip Generator -----\n");
+
+    // Input employee details
+    printf("Enter Employee ID: ");
+    scanf("%d", &empId);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", name);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    printf("Enter HRA: ");
+    scanf("%f", &hra);
+
+    printf("Enter DA: ");
+    scanf("%f", &da);
+
+    printf("Enter PF Deduction: ");
+    scanf("%f", &pf);
+
+    // Calculate Net Salary
+    netSalary = basic + hra + da - pf;
+
+    // Display Pay Slip
+    printf("\n----- PAY SLIP -----\n");
+    printf("Employee ID   : %d\n", empId);
+    printf("Employee Name : %s\n", name);
+    printf("----------------------------\n");
+    printf("Basic Salary  : %.2f\n", basic);
+    printf("HRA           : %.2f\n", hra);
+    printf("DA            : %.2f\n", da);
+    printf("PF Deduction  : %.2f\n", pf);
+    printf("----------------------------\n");
+    printf("Net Salary    : %.2f\n", netSalary);
+
+    return 0;
+}
